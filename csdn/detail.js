@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name               CSDN文章页
-// @namespace          CSDN
+// @namespace          csdn
 // @version            0.0.1
 // @description        清洁页面
 // @description:en     Clean Page
@@ -76,7 +76,7 @@ let clean = () => {
     removeIds.forEach(id => removeId(id));
 };
 
-observer.observe(document, { childList: true, subtree: true });
+observer.observe(document, {childList: true, subtree: true});
 document.addEventListener('DOMContentLoaded', () => {
     observer.disconnect(); // 清理完成后断开观察，避免不必要的性能消耗
 }, true);

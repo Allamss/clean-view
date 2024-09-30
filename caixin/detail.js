@@ -105,13 +105,23 @@ const clean = () => {
     if (document.getElementsByTagName('wb:follow-button').length > 0) {
         document.getElementsByTagName('wb:follow-button')[0].remove(); //移除微博加关注
     }
+
     removeClasses.forEach(c => removeClass(c));
     removeIds.forEach(id => removeId(id));
 };
 
 observer.observe(document, { childList: true, subtree: true });
 document.addEventListener('DOMContentLoaded', () => {
-    //clean();
+    clean();
     observer.disconnect(); // 清理完成后断开观察，避免不必要的性能消耗
+    // 延时后移除水印
+    setTimeout(() => {
+        if (document.getElementById('Main_Content_Val')) {
+            document.getElementById('Main_Content_Val').style.backgroundImage = 'none';
+        }}, 300);
+    setTimeout(() => {
+        if (document.getElementById('Main_Content_Val')) {
+            document.getElementById('Main_Content_Val').style.backgroundImage = 'none';
+        }}, 1000);
 }, true);
 window.onload = clean;

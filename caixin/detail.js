@@ -108,6 +108,8 @@ const clean = () => {
 
     removeClasses.forEach(c => removeClass(c));
     removeIds.forEach(id => removeId(id));
+
+    document.onselectstart = () => true; // 文字可选中
 };
 
 observer.observe(document, { childList: true, subtree: true });

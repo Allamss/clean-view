@@ -5,7 +5,7 @@
 // @description        清洁页面
 // @description:en     Clean Page
 // @author             Allamss
-// @match              *://mp.weixin.qq.com/s/**
+// @match              *://mp.weixin.qq.com/s**
 // @homepageURL        https://github.com/Allamss/clean-view
 // @supportURL         https://github.com/Allamss/clean-view
 // @run-at             document-start

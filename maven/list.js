@@ -22,6 +22,7 @@ const removeClasses = new Set([
     'box', // 左侧栏
     'box-header',
     'facet',
+    'h-ad' // 广告
 ]);
 
 function hasIntersection(setA, setB) {

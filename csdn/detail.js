@@ -27,7 +27,10 @@ const removeClasses = new Set([
     'article-info-box',// 移除作者栏
     'more-toolbox-new',// 移除底部作者
     'blog-footer-bottom',//移除最底部
-    'recommend-box'// 删除关联推荐
+    'recommend-box', // 删除关联推荐
+    'swiper-slide-box-remuneration', // 左侧广告
+    'mb8', // 插件提醒
+    'article-previous', // 下一篇
 ]);
 
 function hasIntersection(setA, setB) {

@@ -28,7 +28,8 @@ const removeClasses = new Set([
     'more-toolbox-new',// 移除底部作者
     'blog-footer-bottom',//移除最底部
     'recommend-box', // 删除关联推荐
-    'swiper-slide-box-remuneration', // 左侧广告
+    'swiper-slide-box-remuneration', // 左侧幻灯片广告
+    'swiper-wrapper', // 左侧幻灯片广告
     'mb8', // 插件提醒
     'article-previous', // 下一篇
 ]);
@@ -82,5 +83,6 @@ let clean = () => {
 observer.observe(document, {childList: true, subtree: true});
 document.addEventListener('DOMContentLoaded', () => {
     observer.disconnect(); // 清理完成后断开观察，避免不必要的性能消耗
+    setTimeout(() => clean(), 3000);
 }, true);
 window.onload = clean;

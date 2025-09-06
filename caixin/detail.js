@@ -231,13 +231,11 @@ document.addEventListener('DOMContentLoaded', () => {
     clean();
     observer.disconnect(); // 清理完成后断开观察，避免不必要的性能消耗
     // 延时后移除水印
-    setTimeout(() => {
-        if (document.getElementById('Main_Content_Val')) {
-            document.getElementById('Main_Content_Val').style.backgroundImage = 'none';
-        }}, 300);
-    setTimeout(() => {
-        if (document.getElementById('Main_Content_Val')) {
-            document.getElementById('Main_Content_Val').style.backgroundImage = 'none';
-        }}, 1000);
+    for (let ms of [300, 1000, 2000, 3000, 5000, 10000]) {
+        setTimeout(() => {
+            if (document.getElementById('Main_Content_Val')) {
+                document.getElementById('Main_Content_Val').style.backgroundImage = 'none';
+            }}, ms);
+    }
 }, true);
 window.onload = clean;

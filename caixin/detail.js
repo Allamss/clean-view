@@ -126,7 +126,7 @@
     }, { capture: true });
 })();
 
-const removeIds = new Set();
+const removeIds = new Set(["questions_container"]);
 const removeClasses = new Set([
     "pc-aivoice",
     "pc-aivoice listner",
